@@ -1,0 +1,210 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Libre Franklin", sans-serif;
+  /* font-weights: 300, 600, 700 */
+}
+
+:root{
+  /* Primary */
+  --blue: hsl(223, 87%, 63%);
+  --blue-hover: hsl(223, 87%, 73%);
+
+  /* Secondary */
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+
+  /* Neutral */
+  --gray: hsl(0, 0%, 59%);
+  --gray-social: hsl(0, 0%, 89%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+/* App component */
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ping-logo{
+  margin-bottom: 40px;
+}
+
+.container h1 span{
+  font-size: 3.5rem;
+  color: var(--gray);
+  font-weight: 300;
+}
+
+.container h1{
+  font-size: 3.5rem;
+  color: var(--very-dark-blue);
+}
+
+.container h2{
+  margin: 20px 0;
+  color: var(--very-dark-blue);
+  font-weight: 300;
+}
+
+/* Email component */
+
+form{
+  display: flex;
+  margin: 20px 0;
+  gap: 15px;
+  width: 50%;
+}
+
+.form-info{
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+
+.input-info{
+  height: 75px;
+  padding: 20px;
+  border-radius: 500px;
+  border: 1px solid var(--gray);
+  font-size: 18px;
+}
+
+.notify-btn{
+  cursor: pointer;
+  height: 75px;
+  border-radius: 500px;
+  border: none;
+  background-color: var(--blue);
+  color: white;
+  font-weight: 500;
+  width: 35%;
+  font-size: 18px;
+  box-shadow: 0 10px 10px var(--pale-blue);
+}
+
+.dashboard-img{
+  margin: 100px 0;
+  width: 50%;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border: 1px solid var(--gray-social);
+  border-radius: 100%;
+  color: var(--blue);
+}
+
+.social-links{
+  display: flex;
+  gap: 20px;
+}
+
+.social-img{
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+}
+
+.copyright-info{
+  margin-top: 20px;
+  color: var(--gray);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+/* Error messages */
+
+.error-message{
+  padding-left: 50px;
+  margin-top: 10px;
+  color: var(--light-red);
+  font-style: italic;
+}
+
+.error-input{
+  height: 75px;
+  padding: 20px;
+  border-radius: 500px;
+  font-size: 18px;
+  border: 1px solid var(--light-red);
+}
+
+/* Hover states */
+
+.notify-btn:hover{
+  background-color: var(--blue-hover);
+}
+
+a:hover{
+  border-radius: 100%;
+  background-color: var(--blue);
+  color: white;
+}
+
+@media screen and (min-width: 1200px){
+
+  .dashboard-img{
+   width: 600px;
+  }
+
+  form{
+    width: 600px;
+  }
+  
+}
+
+@media screen and (max-width: 800px) {
+
+  .container h1, .container h1 span{
+    font-size: 2rem;
+  }
+
+  .container h2{
+    font-size: 1rem; 
+  }
+
+  form{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-info{
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  
+  .input-info, .error-input{
+    height: 50px;
+  }
+
+  .error-message{
+    padding: 0;
+    text-align: center;
+  }
+  
+  .notify-btn{
+    height: 50px;
+    width: 100%;
+  }
+
+  .dashboard-img{
+    width: 75%;
+    margin: 30px 0;
+  }
+
+}
